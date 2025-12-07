@@ -7,3 +7,22 @@
 a {
     text-decoration: none;
 }
+
+h1 {
+    color: white;
+    font-family: CreatoDisplay;
+    font-size: 48px;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-family: Cocogoose Title;
+    font-size: 40px;
+    text-align: center;
+}
+h3 {
+    color: white;
+    font-family: Cocogoose Title;
+    font-size: 28px;
+    text-align: center;
+}
