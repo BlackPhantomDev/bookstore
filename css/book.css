@@ -85,7 +85,7 @@
     padding: 30px 80px;
 }
 
-#book_comments {
+.book_comments {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -93,12 +93,30 @@
     max-height: 200px;
 }
 
+.book_comments::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.book_comments::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.book_comments::-webkit-scrollbar-thumb {
+  background: var(--background-color); 
+}
+
+/* Handle on hover */
+.book_comments::-webkit-scrollbar-thumb:hover {
+  background: #3d3d3d; 
+}
+
 #book_comment_section form {
     display: flex;
     width: 100%;
 }
-
-#comment_input {
+.comment_input {
     width: 100%;
     border: solid 1px white;
     padding: 5px 10px;

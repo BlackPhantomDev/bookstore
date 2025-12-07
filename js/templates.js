@@ -68,14 +68,15 @@ function getBookTemplate(title, author, likes, liked, price, publishedYear, genr
             </section>
 
             <section id="book_comment_section">
-                <div id="book_comments">
+                <h4>Comments</h4>
+                <div class="book_comments" id="book_comments_${bookId}">
 
                 ${commentsHTML}
                     
                 </div>
                 <form action="#commented">
-                    <input id="comment_input" type="text" placeholder="Schreibe einen Kommentar...">
-                    <button id="comment_button"><img src="./assets/icons/send.png" alt=""></button>
+                    <input id="comment_input_${bookId}" class="comment_input" type="text" placeholder="Schreibe einen Kommentar...">
+                    <button id="comment_button" onclick="addNewComment(${bookId})"><img src="./assets/icons/send.png" alt=""></button>
                 </form>
 
                 </section>
