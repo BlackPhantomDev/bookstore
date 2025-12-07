@@ -1,0 +1,118 @@
+.book {
+    color: white;
+    max-width: 600px;
+    min-width: 400px;
+    background-color: #154f63;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.book p, .book span {
+    font-family: CreatoDisplay;
+}
+
+#book_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #124050;
+    height: 70px;
+    border-radius: 10px 10px 0 0;
+    padding: 0 20px;
+}
+#book_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+#book_img img {
+    width: 250px;
+    height: 250px;
+}
+#book_info_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #124050;
+    padding: 30px 80px;
+    gap: 30px;
+}
+
+#price_likes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#price_likes p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+#like_btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.like_btn_img {
+    width: 35px;
+}
+
+#book_infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+#book_infos table {
+    min-width: 200px;
+    border-spacing: 0 10px;
+    font-family: CreatoDisplay;
+}
+#book_infos td:last-child {
+    padding-left: 50px;
+}
+
+
+#book_comment_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 80px;
+}
+
+#book_comments {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: scroll; 
+    max-height: 200px;
+}
+
+#book_comment_section form {
+    display: flex;
+    width: 100%;
+}
+
+#comment_input {
+    width: 100%;
+    border: solid 1px white;
+    padding: 5px 10px;
+}
+
+#comment_button {
+    all: unset;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+#comment_button img {
+    width: 25px;
+    height: 25px;
+}
+
