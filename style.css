@@ -46,9 +46,11 @@
 
 #books {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 50px;
     margin: 50px 0;
+    padding: 0 50px;
+    flex-wrap: wrap;
 }
 
 #footer {
@@ -60,4 +62,22 @@
 
 #footer a {
     color: rgb(200, 253, 207);
+}
+
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    #store {
+        padding: 50px 20px 0 20px;
+    }
+    #books {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #store {
+        padding: 50px 10px 0 10px;
+    }
 }
