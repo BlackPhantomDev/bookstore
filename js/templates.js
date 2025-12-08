@@ -60,11 +60,11 @@ function getBookTemplate(title, author, likes, liked, price, publishedYear, genr
                 <div id="book_infos">
                     <table>
                         <tr>
-                            <td>Author:</td>
+                            <td>Autor:</td>
                             <td id="author">${author}</td>
                         </tr>
                         <tr>
-                            <td>Publish year:</td>
+                            <td>Erscheinungsjahr:</td>
                             <td id="publish_year">${publishedYear}</td>
                         </tr>
                         <tr>
@@ -76,7 +76,7 @@ function getBookTemplate(title, author, likes, liked, price, publishedYear, genr
             </section>
 
             <section id="book_comment_section">
-                <h4>Comments</h4>
+                <h4>Kommentare</h4>
                 <div class="book_comments" id="book_comments_${bookId}">
 
                 ${commentsHTML}
