@@ -47,7 +47,18 @@ function likeToggle(bookId) {
 function addNewComment(bookId) {
     let commentInput = document.getElementById('comment_input_'+ bookId);
     let bookComments = document.getElementById('book_comments_' + bookId);
+    
+    if (commentInput.value == null || commentInput.value == "") {
+        return;
+    }else {
+        if (bookComments.innerText != 'Keine Kommentare Vorhanden!'){
+            bookComments.innerHTML += bookCommentsTemplateHtml("localUser", commentInput.value);
+            commentInput.value = "";
+        } else {
+            bookComments.innerHTML = "";
+            bookComments.innerHTML += bookCommentsTemplateHtml("localUser", commentInput.value);
+            commentInput.value = "";
+        }
+    }
 
-    bookComments.innerHTML += bookCommentsTemplateHtml("localUser", commentInput.value);
-    commentInput.value = "";
 }
