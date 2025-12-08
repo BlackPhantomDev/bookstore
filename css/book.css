@@ -1,10 +1,8 @@
 .book {
     color: white;
-    max-width: 600px;
-    min-width: 400px;
+    width: 600px;
     background-color: #154f63;
     border-radius: 10px;
-    margin: 0 20px;
 }
 
 .book p, .book span {
@@ -16,7 +14,7 @@
     align-items: center;
     justify-content: center;
     background-color: #124050;
-    height: 70px;
+    min-height: 70px;
     border-radius: 10px 10px 0 0;
     padding: 0 20px;
 }
@@ -88,34 +86,40 @@
 .book_comments {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     overflow-y: scroll; 
-    max-height: 200px;
+    height: 200px;
+}
+
+.comment {
+    display: flex;
+    
+}
+.comment span {
+    min-width: 33%;
+    letter-spacing: 1px;
 }
 
 .book_comments::-webkit-scrollbar {
   width: 5px;
 }
-
-/* Track */
 .book_comments::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  border-radius: 10px;
 }
  
-/* Handle */
 .book_comments::-webkit-scrollbar-thumb {
-  background: var(--background-color); 
+  background: #31abd4; 
 }
 
-/* Handle on hover */
 .book_comments::-webkit-scrollbar-thumb:hover {
-  background: #3d3d3d; 
+  background: #41c0eb; 
 }
 
-#book_comment_section form {
+#comment_form {
     display: flex;
     width: 100%;
 }
+
 .comment_input {
     width: 100%;
     border: solid 1px white;
@@ -134,3 +138,44 @@
     height: 25px;
 }
 
+
+/* Responsive Styling */
+
+
+@media (max-width: 768px) {
+    .book {
+        max-width: 600px;
+        width: 100%;
+    }
+    .comment {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    #book_title {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #price_likes {
+        flex-direction: column;
+        gap: 16px;
+    }
+    #book_info_section, #book_comment_section {
+        padding: 30px 40px;
+    }
+    #book_infos {
+        align-items: center;
+    }
+    #book_infos td:last-child {
+        text-align: right;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .book {
+
+    }
+}
