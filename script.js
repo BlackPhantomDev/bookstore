@@ -1,6 +1,6 @@
 let booksRef = document.getElementById('books');
 
-
+// configured variables for contition of like btn
 const unLiked = "./assets/icons/heart_empty.png";
 const liked = "./assets/icons/heart_filled.png";
 
@@ -9,7 +9,8 @@ function init() {
     renderBooks();
 }
 
-function renderBooks(paams) {
+// renders all books from db.js
+function renderBooks() {
     for (let index = 0; index < books.length; index++) {
         let book = books[index];
             
@@ -28,6 +29,7 @@ function renderBooks(paams) {
     }
 }
 
+// changes the condition of the like btn if clicked
 function likeToggle(bookId) {
     let likeBtn = document.getElementById('like_btn_img_'+bookId);    
     let likesRef = document.getElementById('likes_'+bookId);
@@ -44,6 +46,7 @@ function likeToggle(bookId) {
     }
 }
 
+// add a new comment to comment box
 function addNewComment(bookId) {
     let commentInput = document.getElementById('comment_input_'+ bookId);
     let bookComments = document.getElementById('book_comments_' + bookId);
