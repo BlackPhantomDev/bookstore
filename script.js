@@ -36,7 +36,6 @@ function checkLiked(isLiked, bookId) {
     if (isLiked) {
         return `<img id="${likeImgId}" class="like_btn_img" src="${unLiked}" alt="Like button">`;
     } else {        
-        bookLiked.push(bookId);
         return `<img id="${likeImgId}" class="like_btn_img" src="${liked}" alt="Like button">`;
     }
 }
