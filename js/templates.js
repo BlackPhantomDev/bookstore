@@ -27,11 +27,19 @@ function getBookTemplate(title, author, likes, liked, price, publishedYear, genr
     
     likeBtnImg = checkLiked(liked, bookId);
     
-    for (let index = 0; index < comments.length; index++) {
-        let commentUsername = comments[index].name;
-        let commentContent = comments[index].comment;
-        
-        commentsHTML += bookCommentsTemplateHtml(commentUsername, commentContent);
+    if (comments.length != 0) {
+        for (let index = 0; index < comments.length; index++) {
+            let commentUsername = comments[index].name;
+            let commentContent = comments[index].comment;
+            
+            commentsHTML += bookCommentsTemplateHtml(commentUsername, commentContent);
+        }
+    }else {
+        commentsHTML += `
+        <div class="comment">
+            <span>Keine Kommentare Vorhanden!</span>
+        </div>
+        `;
     }
 
     return `
@@ -74,10 +82,10 @@ function getBookTemplate(title, author, likes, liked, price, publishedYear, genr
                 ${commentsHTML}
                     
                 </div>
-                <form action="#commented">
+                <div id="comment_form">
                     <input id="comment_input_${bookId}" class="comment_input" type="text" placeholder="Schreibe einen Kommentar...">
                     <button id="comment_button" onclick="addNewComment(${bookId})"><img src="./assets/icons/send.png" alt=""></button>
-                </form>
+                </div>
 
                 </section>
 
