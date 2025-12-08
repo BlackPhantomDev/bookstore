@@ -29,20 +29,30 @@ function renderBooks() {
     }
 }
 
+// check if book is already liked
+function checkLiked(isLiked, bookId) {
+    const likeImgId = "like_btn_img_" + bookId;
+
+    if (isLiked) {
+        return `<img id="${likeImgId}" class="like_btn_img" src="${unLiked}" alt="Like button">`;
+    } else {        
+        bookLiked.push(bookId);
+        return `<img id="${likeImgId}" class="like_btn_img" src="${liked}" alt="Like button">`;
+    }
+}
+
 // changes the condition of the like btn if clicked
 function likeToggle(bookId) {
-    let likeBtn = document.getElementById('like_btn_img_'+bookId);    
-    let likesRef = document.getElementById('likes_'+bookId);
+    let likeBtn = document.getElementById('like_btn_img_' + bookId);
+    let likesRef = document.getElementById('likes_' + bookId);
     let likes = parseInt(likesRef.innerHTML);
-    
+
     if (likeBtn.getAttribute("src") == unLiked) {
         likeBtn.setAttribute("src", liked);
         likesRef.innerHTML = likes + 1;
-        
-    }else {
+    } else {
         likeBtn.setAttribute("src", unLiked);
         likesRef.innerHTML = likes - 1;
-        
     }
 }
 
@@ -63,5 +73,4 @@ function addNewComment(bookId) {
             commentInput.value = "";
         }
     }
-
 }

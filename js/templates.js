@@ -10,27 +10,12 @@ function bookCommentsTemplateHtml(commentUsername, commentContent) {
     `;
 }
 
-// check if book is already liked
-function checkLiked(liked, bookId) {
-    let like_img_id = "like_btn_img_" + bookId;
-    let likeBtnImg = "";
-
-    if (liked == true){
-        likeBtnImg = '<img id="'+like_img_id+'" class="like_btn_img" src="./assets/icons/heart_empty.png" alt="Like button">';
-    }else {
-        likeBtnImg = '<img id="'+like_img_id+'" class="like_btn_img" src="./assets/icons/heart_filled.png" alt="Like button">';
-    }
-    
-    return likeBtnImg;
-}
-
 // creates a new book column with values form params
 // set like btn with custom check if liked
 // check if it has already comments
 // return template with all values
 function getBookTemplate(title, author, likes, liked, price, publishedYear, genre, comments, bookId) {
     let commentsHTML = "";
-    
     likeBtnImg = checkLiked(liked, bookId);
     
     if (comments.length != 0) {
