@@ -1,5 +1,6 @@
 let comments = document.getElementById('book_comments');
 
+// return template for a single comment
 function bookCommentsTemplateHtml(commentUsername, commentContent) {
     return `
         <div class="comment">
@@ -9,6 +10,7 @@ function bookCommentsTemplateHtml(commentUsername, commentContent) {
     `;
 }
 
+// check if book is already liked
 function checkLiked(liked, bookId) {
     let like_img_id = "like_btn_img_" + bookId;
     let likeBtnImg = "";
@@ -22,6 +24,10 @@ function checkLiked(liked, bookId) {
     return likeBtnImg;
 }
 
+// creates a new book column with values form params
+// set like btn with custom check if liked
+// check if it has already comments
+// return template with all values
 function getBookTemplate(title, author, likes, liked, price, publishedYear, genre, comments, bookId) {
     let commentsHTML = "";
     
